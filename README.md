@@ -1,13 +1,31 @@
 # Homomorphic-Encryption
-So this repo has 3 Python files as of now.
-the first file is Paillier_Homomorphic_Encryption.py which we made to see the working and implement the Paillier HomoMorphic Encryption system and see how the homomorphic encryption would work with another algorithm. So this file code is fully functional and gives accurate output.
-
-the next file to note is trial.py in which we have implemented BGV method on a very small scale just to simulate its working and observe output. The model has been given very specific values which we knew prior that it would work accurately and produce the desired output
-The last file is bgv-main.py which is our main attempt at implementation of BGV method of homomorphic encryption. But in the output part of this code, we notice that the values of addition and multiplication are not accurate.This is because of noise becoming incorporated in our data which exponentially increases during multiplication so then the values in the output are not accurate or correct. On continued tuning of parameter values and implementing the actual math of  polynomial arithmetic and modulus switching, the accuracy of results may be improved and this is our work in progress.
+The repo follows this structure:
+the trials folder contains various attempts at homomorphic encryption which failed or are incomplete and give erronneous output.
+these attempts include files like trial.py and trial2.py 
+Currently, the correctly and best-working code files are demo_bgv.py and bgv.py
+To run the code and see the output, use:
+```bash
+python demo_bgv.py
+```
+All the codes are inside bgv.py which the demo_bgv file imports and uses to keep the code clean.
+As of now, demo_bgv performs addition correctly but multiplication is producing output with noise and errors.
 
 ## Steps to run the code: ##
 1] Using code editor like VsCode:
-pull our repository into your local system or download the .py file you wish to run. After that run it following the normal procedure.
+* navigate into the desired location where you want to clone the repository. Next, in the terminal use code:
+```bash
+git clone https://github.com/sammymallya/Homomorphic-Encryption.git
+```
+* this will create a local copy of the chosen repo files inside your folder. next to run the python file:
+* Next , download all required libraries using:
+```bash
+pip install requirements.txt
+```
+Now you are ready to run the code files
+```bash
+  python demo_bgv.py
+```
+
 
 2] Using Google Colab
 Import the necessary libraries and then paste our code into a code cell and run.
